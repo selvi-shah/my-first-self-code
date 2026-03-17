@@ -1,0 +1,1 @@
+export const dbName = "my-first-db"
