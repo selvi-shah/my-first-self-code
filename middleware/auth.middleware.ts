@@ -11,7 +11,9 @@ const authMiddleware = async(req: Request, res:Response, next:NextFunction) =>{
                     message: "Unauthorised User"
                 })
                 } else {
-                    req.body.id = decode.id;
+                    if(req.body){
+                        req.body.id = decode.id;
+                    }
                     next()
                 }
             })
